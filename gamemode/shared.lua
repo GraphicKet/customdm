@@ -8,10 +8,10 @@ include("player_classes/" .. v)
 end
 
 
-GM.Name         = "Custom dm"
-GM.Author       = "Ubermacht"
-GM.Contact      = "http://steamcommunity.com/id/MJazz"
-GM.Website      = ""
+GM.Name = "Modern Combat DEV"
+GM.Author = "By GraphicKet/Ubermacht and Thalexs"
+GM.Contact = "http://steamcommunity.com/id/MJazz"
+GM.Version = "0.1"
 
 local nonedropableweapons = {
  ["weapon_fists"] = true,
