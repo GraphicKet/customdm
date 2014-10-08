@@ -1,0 +1,5 @@
+"customdm"
+{
+	"title"		"CustomDM"
+	"base"		""
+}
