@@ -23,4 +23,4 @@ function PLAYER:Loadout()
 	
 end
 
-player_manager.RegisterClass( "player_rebel", PLAYER, "player_default" )
+player_manager.RegisterClass( "player_sniper", PLAYER, "player_default" )
