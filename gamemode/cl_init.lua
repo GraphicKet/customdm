@@ -1,5 +1,19 @@
 include("shared.lua")
 
+
+local displayamericanmodels = {
+	"models/player/Group01/Male_01.mdl",
+	"models/player/Group01/Male_04.mdl",
+	"models/player/Group01/Male_07.mdl",
+	"models/player/Group01/Male_09.mdl",
+	"models/player/Group01/Female_01.mdl",
+	"models/player/Group01/Female_02.mdl",
+	"models/player/Group01/Female_03.mdl",
+	"models/player/Group01/Female_04.mdl",
+}
+
+
+
 --[[
 function hidehud(name) -- Removing the default HUD
 	for k, v in pairs({"CHudHealth", "CHudBattery"})do -- Will use it later.
@@ -39,7 +53,7 @@ end
    local icon = vgui.Create( "DModelPanel", Panel )
      icon:SetSize( 350, 280 )
 	 icon:SetPos( 0, 110 )
-	 icon:SetModel(table.Random(rebelmodels)) -- you can only change colors on playermodels
+	 icon:SetModel(table.Random(displayamericanmodels)) -- you can only change colors on playermodels
      function icon:OnMousePressed(ply)
 	    if MOUSE_LEFT then
 	         net.Start("changeteam")
@@ -65,7 +79,7 @@ end
     local icons = vgui.Create( "DModelPanel", Panel )
      icons:SetSize( 350,280 )
 	 icons:SetPos( 200, 110 )
-	 icons:SetModel(table.Random(americanmodels)) 
+	 icons:SetModel(table.Random(displayamericanmodels)) 
      function icons:OnMousePressed(ply)
 	  if MOUSE_LEFT then
 	        net.Start("changeteam")
