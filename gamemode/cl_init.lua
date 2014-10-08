@@ -1,5 +1,12 @@
 include("shared.lua")
 
+function hidehud(name) -- Removing the default HUD
+	for k, v in pairs({"CHudHealth", "CHudBattery"})do
+		if name == v then return false end
+	end
+end
+hook.Add("HUDShouldDraw", "HideOurHud", hidehud)
+
 net.Receive("blackout", function()
        local blackout = vgui.Create("DFrame")
 	         blackout:SetSize(ScrW(), ScrH())
