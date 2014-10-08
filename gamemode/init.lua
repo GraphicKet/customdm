@@ -46,11 +46,11 @@ function ftimer.restart(ply)
 end
 
 net.Receive("changeteam", function(ply) 
-local team = net.ReadString()
+local changetoteam = net.ReadString()
 
-if team == "Americans" then
+if changetoteam == "Americans" then
     ply:SetTeam(TEAM_AMERICAN)
-elseif team == "Rebels" then
+elseif changetoteam == "Rebels" then
     ply:SetTeam(TEAM_REBEL)	 
    end	 
 end)
