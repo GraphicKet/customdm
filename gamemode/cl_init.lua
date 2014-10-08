@@ -1,4 +1,5 @@
 include("shared.lua")
+include("config.lua")
 
 
 local displayamericanmodels = {
