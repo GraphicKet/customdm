@@ -13,3 +13,17 @@ GM.Author       = "Ubermacht"
 GM.Contact      = "http://steamcommunity.com/id/MJazz"
 GM.Website      = ""
 
+local nonedropableweapons = {
+ ["weapon_fists"] = true,
+}
+
+function GM:PlayerButtonDown(ply, key)
+local curweapon = ply:GetActiveWeapon()
+ if(key == KEY_Q) then 
+      if nonedropableweapons[ply:GetActiveWeapon():GetClass()] then return end 
+	  if not IsValid(ply:GetActiveWeapon()) then return end
+      if SERVER then
+	  timer.Simple(0.01, function() ply:DropWeapon(curweapon) end)
+	  end
+   end
+end
