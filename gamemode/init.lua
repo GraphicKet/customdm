@@ -8,6 +8,7 @@ include("config.lua")
 ftimer = {}
 
 util.AddNetworkString("blackout")
+util.AddNetworkString("changeteam")
 
 function GM:PlayerInitialSpawn(ply)
    ply:SetTeam(TEAM_NONE)  
@@ -37,6 +38,16 @@ function ftimer.restart(ply)
    ply:Spawn()
    game.CleanUpMap() 
 end
+
+net.Receive("changeteam", function(ply) 
+local team = net.ReadString()
+
+if team == "Americans" then
+    ply:SetTeam(TEAM_AMERICAN)
+elseif team == "Rebels" then
+    ply:SetTeam(TEAM_REBEL)	 
+   end	 
+end)
 
 hook.Add("PlayerDeath", "checkifsomeonereached limit", function()
    if ftimer.Rebels >= ftimer.FragLimit then
