@@ -59,23 +59,25 @@ hook.Add("PlayerDeath", "checkifsomeonereached limit", function()
    if ftimer.Rebels >= ftimer.FragLimit then
     for k, v in pairs(player.GetAll()) do
 	 v:PrintMessage(HUD_PRINTCENTER, "Rebels won! New round in about 20 Seconds")
-	 rebelswon = true
-	 timer.Simple(5, function() ftimer.restart() rebelswon = false end)
+	 timer.Simple(5, function() ftimer.restart()  
+	 for k, v in pairs(team.GetPlayers(TEAM_REBEL)) do
+       	 v:PS_GivePoints(ftimer.winnerreward)
+         end		 
+	 end)
+	 end
    elseif ftimer.Americans >= ftimer.FragLimit then
      for k, v in pairs(player.GetAll()) do
 	   americanswon = true
 	   v:PrintMessage(HUD_PRINTCENTER, "Americans won! New round in about 20 Seconds")
-	timer.Simple(3, function() ftimer.restart() americanswon = false end)
-     end
-     if rebelswon then
-       for k, v in pairs(team.GetPlayers(TEAM_REBEL)) do
-       	 v:PS_GivePoints(ftimer.winnerreward)
-       elseif americanswon then
-       	 for k, v in pairs(team.GetPlayers(TEAM_AMERICAN)) do
-       	 v:PS_GivePoints(ftimer.winnerreward)
-      end	 
+	   timer.Simple(3, function() ftimer.restart() 
+         for k, v in pairs(team.GetPlayers(TEAM_AMERICAN)) do
+       	     v:PS_GivePoints(ftimer.winnerreward)
+         end	 
+      	   end)
+        end
    end
 end
+ 
 
 function GM:DoPlayerDeath( ply, attacker, dmginfo )
 
