@@ -31,7 +31,7 @@ end
    local icon = vgui.Create( "DModelPanel", Panel )
      icon:SetSize( 350, 280 )
 	 icon:SetPos( 0, 110 )
-	 icon:SetModel( "models/player/Group01/Male_01.mdl" ) -- you can only change colors on playermodels
+	 icon:SetModel(table.Random(rebelmodels)) -- you can only change colors on playermodels
      function icon:OnMousePressed(ply)
 	    if MOUSE_LEFT then
 	         net.Start("changeteam")
@@ -51,14 +51,14 @@ end
  
 	
 	 
-	 --function icon:LayoutEntity( Entity ) return end -- disables default rotation
-     function icon.Entity:GetPlayerColor() return Vector ( 0, 0, 1 ) end --we need to set it to a Vector not a Color, so the values are normal RGB values divided by 255.
 
-    local icon = vgui.Create( "DModelPanel", Panel )
-     icon:SetSize( 350,280 )
-	 icon:SetPos( 200, 110 )
-	 icon:SetModel( "models/player/Group01/Male_01.mdl" ) -- you can only change colors on playermodels
-     function icon:OnMousePressed(ply)
+     function icons.Entity:GetPlayerColor() return Vector ( 0, 0, 1 ) end 
+
+    local icons = vgui.Create( "DModelPanel", Panel )
+     icons:SetSize( 350,280 )
+	 icons:SetPos( 200, 110 )
+	 icons:SetModel(table.Random(americanmodels)) 
+     function icons:OnMousePressed(ply)
 	  if MOUSE_LEFT then
 	        net.Start("changeteam")
 	            net.WriteString("Americans")
@@ -68,7 +68,7 @@ end
 	 end 
 	 
 	 
-	-- function icon:LayoutEntity( Entity ) return end -- disables default rotation
+	
      function icon.Entity:GetPlayerColor() return Vector ( 1, 0, 0 ) end 
 
 end
