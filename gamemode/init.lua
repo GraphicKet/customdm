@@ -9,11 +9,17 @@ ftimer = {}
 
 util.AddNetworkString("blackout")
 util.AddNetworkString("changeteam")
+util.AddNetworkString("TeamMenu")
 
 function GM:PlayerInitialSpawn(ply)
    ply:SetTeam(TEAM_NONE)  
-   ply:PrintMessage(HUD_PRINTTALK, "Press f4 to choose team" )
+   ply:PrintMessage(HUD_PRINTTALK, "Press f2 to choose team" )
 end
+
+function GM:ShowTeam(caller)
+   net.Start("TeamMenu")
+   net.Send(caller)
+end	
 
 function GM:PlayerLoadout()
   if ply:Team() == TEAM_NONE then
