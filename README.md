@@ -1,7 +1,7 @@
 customdm
 ========
 
-Created by Ubermacht(http://steamcommunity.com/id/MJazz) & Thalex
+Created by Ubermacht(http://steamcommunity.com/id/MJazz) & Thalexs (http://steamcommunity.com/id/Thalexs/)
 
 
 
