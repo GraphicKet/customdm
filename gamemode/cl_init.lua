@@ -58,9 +58,7 @@ end
 	 function icon.Entity:GetPlayerColor() return Vector ( 1, 0, 0 ) end 
      function icon:OnMousePressed(ply)
 	    if MOUSE_LEFT then
-	         net.Start("changeteam")
-	            net.WriteString("Rebels")
-	        net.SendToServer()
+	        RunConsoleCommand("changetorebel")
 	        Panel:Close()
 	  end 
 	 end 
@@ -84,9 +82,7 @@ local vs = vgui.Create("DLabel", Panel)
 	 function icons.Entity:GetPlayerColor() return Vector ( 0, 0, 1 ) end 	
      function icons:OnMousePressed(ply)
 	  if MOUSE_LEFT then
-	        net.Start("changeteam")
-	            net.WriteString("Americans")
-	        net.SendToServer()
+	        RunConsoleCommand("changetorebel")
 	        Panel:Close()
 	   end 
 	 end 
