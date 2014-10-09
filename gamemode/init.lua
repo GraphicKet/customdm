@@ -5,7 +5,6 @@ include("shared.lua")
 include("rounds.lua")
 include("config.lua")
 
-ftimer = {}
 
 util.AddNetworkString("blackout")
 util.AddNetworkString("changeteam")
