@@ -1,5 +1,9 @@
-team.SetUp(TEAM_NONE, "None", Color(255, 0, 0, 255))
+TEAM_NONE = 1
+TEAM_AMERICAN = 2
+TEAM_REBEL = 3
 
+
+team.SetUp(TEAM_NONE, "None", Color(255, 0, 0, 255))
 team.SetUp(TEAM_AMERICAN, "American", Color(0, 255, 0, 255))
 team.SetUp(TEAM_REBEL, "Rebel", Color(255, 0, 0, 255))
 
