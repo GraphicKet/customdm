@@ -6,7 +6,6 @@ include("config.lua")
 
 
 util.AddNetworkString("blackout")
-util.AddNetworkString("changeteam")
 util.AddNetworkString("TeamMenu")
 
 function GM:PlayerInitialSpawn(ply)
@@ -43,14 +42,14 @@ function ftimer.restart(ply)
    game.CleanUpMap() 
 end
 
-net.Receive("changeteam", function(ply) 
-local changetoteam = net.ReadString()
+concommand.Add("changetoamerican", function()
+ ply:SetTeam("TEAM_AMERICAN")
+ ply:Spawn()
+end)
 
-if changetoteam == "Americans" then
-    ply:SetTeam(TEAM_AMERICAN)
-elseif changetoteam == "Rebels" then
-    ply:SetTeam(TEAM_REBEL)	 
-   end	 
+concommand.Add("changetorebel", function()
+ ply:SetTeam("TEAM_REBEL")
+ ply:Spawn()
 end)
 
 hook.Add("PlayerDeath", "checkifsomeonereached limit", function()
