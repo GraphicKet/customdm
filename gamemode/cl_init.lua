@@ -55,6 +55,7 @@ end
      icon:SetSize( 350, 280 )
 	 icon:SetPos( 0, 110 )
 	 icon:SetModel(table.Random(displayamericanmodels)) -- you can only change colors on playermodels
+	 function icon.Entity:GetPlayerColor() return Vector ( 1, 0, 0 ) end 
      function icon:OnMousePressed(ply)
 	    if MOUSE_LEFT then
 	         net.Start("changeteam")
@@ -75,12 +76,12 @@ end
 	
 	 
 
-     function icons.Entity:GetPlayerColor() return Vector ( 0, 0, 1 ) end 
 
     local icons = vgui.Create( "DModelPanel", Panel )
      icons:SetSize( 350,280 )
 	 icons:SetPos( 200, 110 )
 	 icons:SetModel(table.Random(displayamericanmodels)) 
+	 function icons.Entity:GetPlayerColor() return Vector ( 0, 0, 1 ) end 	
      function icons:OnMousePressed(ply)
 	  if MOUSE_LEFT then
 	        net.Start("changeteam")
@@ -89,11 +90,6 @@ end
 	        Panel:Close()
 	   end 
 	 end 
-	 
-	 
-	
-     function icon.Entity:GetPlayerColor() return Vector ( 1, 0, 0 ) end 
-
 end
 net.Receive("TeamMenu", MyMenu) 
 
