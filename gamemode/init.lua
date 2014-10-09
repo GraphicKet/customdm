@@ -76,7 +76,7 @@ hook.Add("PlayerDeath", "checkifsomeonereached limit", function()
       	   end)
         end
    end
-end
+end)
  
 
 function GM:DoPlayerDeath( ply, attacker, dmginfo )
