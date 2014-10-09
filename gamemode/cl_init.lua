@@ -66,12 +66,12 @@ end
 	 end 
      
 	
-	local vs = vgui.Create("DLabel", Panel)
-    vs:SetPos(10,1) // Position
-    vs:SetColor(Color(255,255,255,255)) // Color
-    vs:SetFont("default")
-    vs:SetText("VS") // Text
-    vs:SetSize(90, 90) // make the control the same size as the text.
+local vs = vgui.Create("DLabel", Panel)
+      vs:SetColor(Color(255,255,255,255)) // Color
+      vs:SetFont("default")
+      vs:SetText("VS") // Text
+      vs:SetSize(90, 90) // make the control the same size as the text.
+      vs:Center()
  
 	
 	 
