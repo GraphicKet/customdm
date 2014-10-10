@@ -3,14 +3,7 @@ include("config.lua")
 
 
 local displayamericanmodels = {
-	"models/player/Group01/Male_01.mdl",
-	"models/player/Group01/Male_04.mdl",
-	"models/player/Group01/Male_07.mdl",
-	"models/player/Group01/Male_09.mdl",
-	"models/player/Group01/Female_01.mdl",
-	"models/player/Group01/Female_02.mdl",
-	"models/player/Group01/Female_03.mdl",
-	"models/player/Group01/Female_04.mdl",
+	"models/codmw2/t_codmw2.mdl",
 }
 
 
