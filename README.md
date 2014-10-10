@@ -22,15 +22,23 @@ Team Kill Limit 150 - the first team to make 150 kill wins and the map vote show
  
 Give pointshop points per kill
  
----- Non essencial ideas under this ----
+====================================================================
+Non essencial ideas under this
+====================================================================
 
+Menu like team menu that opens and shows all classes and their models
 
----- Bug list (add bugs to squash)  ----
+====================================================================
+Bug list (add bugs to squash)
+====================================================================
 
+lots
 
-----         Leave notes here       ----
- 
-  
+====================================================================
+Leave notes here
+====================================================================
+
+  hai
 -----------------------------------------
 ⒸⓄⓅⓎⓇⒾⒼⒽⓉ
 Ubermacht(http://steamcommunity.com/id/MJazz) 
