@@ -82,7 +82,7 @@ local vs = vgui.Create("DLabel", Panel)
 	 function icons.Entity:GetPlayerColor() return Vector ( 0, 0, 1 ) end 	
      function icons:OnMousePressed(ply)
 	  if MOUSE_LEFT then
-	        RunConsoleCommand("changetorebel")
+	        RunConsoleCommand("changetoamerican")
 	        Panel:Close()
 	   end 
 	 end 
