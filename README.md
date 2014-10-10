@@ -32,7 +32,7 @@ Give pointshop points per kill
 
 ----         Leave notes here       ----
  
- 
+  
 -----------------------------------------
 ⒸⓄⓅⓎⓇⒾⒼⒽⓉ
 Ubermacht(http://steamcommunity.com/id/MJazz) 
